@@ -338,7 +338,10 @@ export default function ChatInterface({
 
   const formatTime = (timestamp: string) => {
     const date = new Date(timestamp)
-    return date.toLocaleTimeString('th-TH', { hour: '2-digit', minute: '2-digit' })
+    return date.toLocaleString('th-TH', { 
+      dateStyle: 'short', 
+      timeStyle: 'short' 
+    })
   }
 
   return (
