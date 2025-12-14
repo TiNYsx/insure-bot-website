@@ -13,6 +13,8 @@ interface LeftPanelProps {
   onDeleteChat: (id: string) => void
   volume: number
   onVolumeChange: (volume: number) => void
+  isOpen: boolean
+  onClose: () => void
 }
 
 export default function LeftPanel({
@@ -23,18 +25,43 @@ export default function LeftPanel({
   onDeleteChat,
   volume,
   onVolumeChange,
+  isOpen,
+  onClose,
 }: LeftPanelProps) {
   const [showSettings, setShowSettings] = useState(false)
 
+  const formatThaiDate = (timestamp: string) => {
+    const date = new Date(timestamp)
+    const thaiYear = date.getFullYear() + 543 // Buddhist Era
+    const monthNames = [
+      'ม.ค.', 'ก.พ.', 'มี.ค.', 'เม.ย.', 'พ.ค.', 'มิ.ย.',
+      'ก.ค.', 'ส.ค.', 'ก.ย.', 'ต.ค.', 'พ.ย.', 'ธ.ค.'
+    ]
+    const day = date.getDate()
+    const month = monthNames[date.getMonth()]
+    const year = thaiYear.toString().slice(-2) // Last two digits
+    const time = date.toLocaleTimeString('th-TH', { hour: '2-digit', minute: '2-digit' })
+    return `${day} ${month} ${year} ${time}`
+  }
+
   return (
-    <div className="w-64 bg-card border-r border-border flex flex-col h-screen shadow-sm">
+    <div className={`w-64 bg-card border-r border-border flex flex-col h-screen shadow-sm absolute left-0 top-0 z-10 transition-transform duration-300 ${isOpen ? 'translate-x-0' : '-translate-x-full'}`}>
+      {isOpen && (
+        <button
+          onClick={onClose}
+          className="absolute top-4 right-4 p-2 rounded-full bg-muted hover:bg-muted/80 z-20"
+          title="ปิดเมนู"
+        >
+          ✕
+        </button>
+      )}
       {/* Header */}
       <div className="p-4 border-b border-border">
         <h1 className="text-xl font-bold text-card-foreground flex items-center gap-2">
           <span className="w-8 h-8 bg-primary text-primary-foreground rounded-lg flex items-center justify-center text-sm font-bold">
-            IB
+            SSO
           </span>
-          Insure Bot
+          SSO Chatbot
         </h1>
       </div>
 
@@ -45,7 +72,7 @@ export default function LeftPanel({
           className="w-full bg-primary hover:bg-primary/90 text-primary-foreground rounded-lg font-medium flex items-center justify-center gap-2"
         >
           <Plus size={20} />
-          New Chat
+          สร้างแชทใหม่
         </Button>
       </div>
 
@@ -53,7 +80,7 @@ export default function LeftPanel({
       <div className="flex-1 overflow-y-auto px-2 space-y-2">
         {chats.length === 0 ? (
           <div className="text-center py-8 text-muted-foreground text-sm">
-            No chats yet. Start a new one!
+            ยังไม่มีแชท สร้างแชทใหม่ได้เลย!
           </div>
         ) : (
           chats.map(chat => (
@@ -72,7 +99,7 @@ export default function LeftPanel({
                     {chat.title}
                   </p>
                   <p className="text-xs text-muted-foreground">
-                    {new Date(parseInt(chat.id)).toLocaleDateString()}
+                    {formatThaiDate(chat.timestamp)}
                   </p>
                 </div>
                 <button
@@ -96,13 +123,13 @@ export default function LeftPanel({
           onClick={() => setShowSettings(!showSettings)}
           className="w-full text-left text-sm font-medium text-card-foreground hover:text-primary transition-colors"
         >
-          Settings
+          การตั้งค่า
         </button>
         {showSettings && (
           <div className="mt-3 space-y-3">
             <div>
               <label className="text-xs text-muted-foreground block mb-2">
-                Volume: {volume}%
+                เสียง: {volume}%
               </label>
               <input
                 type="range"
@@ -117,7 +144,7 @@ export default function LeftPanel({
               href="/admin"
               className="block text-xs text-primary hover:text-primary/80 transition-colors"
             >
-              Admin Panel →
+              แผงควบคุมผู้ดูแล →
             </a>
           </div>
         )}

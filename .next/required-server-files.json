@@ -99,7 +99,7 @@
         "transform": "lodash/{{member}}"
       }
     },
-    "outputFileTracingRoot": "C:\\Users\\tinysx\\Desktop\\insure-bot-website",
+    "outputFileTracingRoot": "C:\\Users\\tinysx\\Documents\\GitHub\\insure-bot-website",
     "cacheComponents": false,
     "cacheLife": {
       "default": {
@@ -289,11 +289,11 @@
     "bundlePagesRouterDependencies": false,
     "configFileName": "next.config.mjs",
     "turbopack": {
-      "root": "C:\\Users\\tinysx\\Desktop\\insure-bot-website"
+      "root": "C:\\Users\\tinysx\\Documents\\GitHub\\insure-bot-website"
     },
     "distDirRoot": ".next"
   },
-  "appDir": "C:\\Users\\tinysx\\Desktop\\insure-bot-website",
+  "appDir": "C:\\Users\\tinysx\\Documents\\GitHub\\insure-bot-website",
   "relativeAppDir": "",
   "files": [
     ".next\\routes-manifest.json",

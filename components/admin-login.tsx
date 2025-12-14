@@ -50,15 +50,15 @@ export default function AdminLogin({ onLogin }: AdminLoginProps) {
             <LogIn size={24} />
           </div>
         </div>
-        <h1 className="text-2xl font-bold text-center mb-2 text-foreground">Admin Panel</h1>
+        <h1 className="text-2xl font-bold text-center mb-2 text-foreground">แผงควบคุมผู้ดูแล</h1>
         <p className="text-center text-muted-foreground mb-6 text-sm">
-          Manage Insure Bot configuration
+          จัดการการตั้งค่า SSO Chatbot
         </p>
 
         <form onSubmit={handleLogin} className="space-y-4">
           <div>
             <label className="block text-sm font-medium text-foreground mb-2">
-              Username
+              ชื่อผู้ใช้
             </label>
             <input
               type="text"
@@ -71,7 +71,7 @@ export default function AdminLogin({ onLogin }: AdminLoginProps) {
 
           <div>
             <label className="block text-sm font-medium text-foreground mb-2">
-              Password
+              รหัสผ่าน
             </label>
             <input
               type="password"
@@ -93,12 +93,12 @@ export default function AdminLogin({ onLogin }: AdminLoginProps) {
             disabled={isLoading}
             className="w-full py-2 bg-primary text-primary-foreground rounded-lg hover:bg-primary/90 disabled:opacity-50 disabled:cursor-not-allowed transition-all font-medium"
           >
-            {isLoading ? 'Logging in...' : 'Login'}
+            {isLoading ? 'กำลังเข้าสู่ระบบ...' : 'เข้าสู่ระบบ'}
           </button>
         </form>
 
         <p className="text-xs text-muted-foreground text-center mt-6">
-          Default: username: <strong>root</strong> / password: <strong>admin</strong>
+          ค่าเริ่มต้น: ชื่อผู้ใช้: <strong>root</strong> / รหัสผ่าน: <strong>admin</strong>
         </p>
       </div>
     </div>

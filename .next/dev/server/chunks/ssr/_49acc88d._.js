@@ -69,7 +69,7 @@ function AdminLogin({ onLogin }) {
                 }, this),
                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f2e$pnpm$2f$next$40$16$2e$0$2e$3_react$2d$dom$40$19$2e$2$2e$0_react$40$19$2e$2$2e$0_$5f$react$40$19$2e$2$2e$0$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("h1", {
                     className: "text-2xl font-bold text-center mb-2 text-foreground",
-                    children: "Admin Panel"
+                    children: "แผงควบคุมผู้ดูแล"
                 }, void 0, false, {
                     fileName: "[project]/components/admin-login.tsx",
                     lineNumber: 53,
@@ -77,7 +77,7 @@ function AdminLogin({ onLogin }) {
                 }, this),
                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f2e$pnpm$2f$next$40$16$2e$0$2e$3_react$2d$dom$40$19$2e$2$2e$0_react$40$19$2e$2$2e$0_$5f$react$40$19$2e$2$2e$0$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
                     className: "text-center text-muted-foreground mb-6 text-sm",
-                    children: "Manage Insure Bot configuration"
+                    children: "จัดการการตั้งค่า SSO Chatbot"
                 }, void 0, false, {
                     fileName: "[project]/components/admin-login.tsx",
                     lineNumber: 54,
@@ -91,7 +91,7 @@ function AdminLogin({ onLogin }) {
                             children: [
                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f2e$pnpm$2f$next$40$16$2e$0$2e$3_react$2d$dom$40$19$2e$2$2e$0_react$40$19$2e$2$2e$0_$5f$react$40$19$2e$2$2e$0$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("label", {
                                     className: "block text-sm font-medium text-foreground mb-2",
-                                    children: "Username"
+                                    children: "ชื่อผู้ใช้"
                                 }, void 0, false, {
                                     fileName: "[project]/components/admin-login.tsx",
                                     lineNumber: 60,
@@ -118,7 +118,7 @@ function AdminLogin({ onLogin }) {
                             children: [
                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f2e$pnpm$2f$next$40$16$2e$0$2e$3_react$2d$dom$40$19$2e$2$2e$0_react$40$19$2e$2$2e$0_$5f$react$40$19$2e$2$2e$0$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("label", {
                                     className: "block text-sm font-medium text-foreground mb-2",
-                                    children: "Password"
+                                    children: "รหัสผ่าน"
                                 }, void 0, false, {
                                     fileName: "[project]/components/admin-login.tsx",
                                     lineNumber: 73,
@@ -160,7 +160,7 @@ function AdminLogin({ onLogin }) {
                             type: "submit",
                             disabled: isLoading,
                             className: "w-full py-2 bg-primary text-primary-foreground rounded-lg hover:bg-primary/90 disabled:opacity-50 disabled:cursor-not-allowed transition-all font-medium",
-                            children: isLoading ? 'Logging in...' : 'Login'
+                            children: isLoading ? 'กำลังเข้าสู่ระบบ...' : 'เข้าสู่ระบบ'
                         }, void 0, false, {
                             fileName: "[project]/components/admin-login.tsx",
                             lineNumber: 91,
@@ -175,21 +175,21 @@ function AdminLogin({ onLogin }) {
                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f2e$pnpm$2f$next$40$16$2e$0$2e$3_react$2d$dom$40$19$2e$2$2e$0_react$40$19$2e$2$2e$0_$5f$react$40$19$2e$2$2e$0$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
                     className: "text-xs text-muted-foreground text-center mt-6",
                     children: [
-                        "Default: username: ",
+                        "ค่าเริ่มต้น: ชื่อผู้ใช้: ",
                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f2e$pnpm$2f$next$40$16$2e$0$2e$3_react$2d$dom$40$19$2e$2$2e$0_react$40$19$2e$2$2e$0_$5f$react$40$19$2e$2$2e$0$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("strong", {
                             children: "root"
                         }, void 0, false, {
                             fileName: "[project]/components/admin-login.tsx",
                             lineNumber: 101,
-                            columnNumber: 30
+                            columnNumber: 36
                         }, this),
-                        " / password: ",
+                        " / รหัสผ่าน: ",
                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f2e$pnpm$2f$next$40$16$2e$0$2e$3_react$2d$dom$40$19$2e$2$2e$0_react$40$19$2e$2$2e$0_$5f$react$40$19$2e$2$2e$0$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("strong", {
                             children: "admin"
                         }, void 0, false, {
                             fileName: "[project]/components/admin-login.tsx",
                             lineNumber: 101,
-                            columnNumber: 64
+                            columnNumber: 70
                         }, this)
                     ]
                 }, void 0, true, {
@@ -277,7 +277,7 @@ function AdminPanel({ onLogout }) {
                             children: [
                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f2e$pnpm$2f$next$40$16$2e$0$2e$3_react$2d$dom$40$19$2e$2$2e$0_react$40$19$2e$2$2e$0_$5f$react$40$19$2e$2$2e$0$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
                                     className: "w-10 h-10 bg-primary text-primary-foreground rounded-lg flex items-center justify-center font-bold",
-                                    children: "IB"
+                                    children: "SSO"
                                 }, void 0, false, {
                                     fileName: "[project]/components/admin-panel.tsx",
                                     lineNumber: 54,
@@ -287,7 +287,7 @@ function AdminPanel({ onLogout }) {
                                     children: [
                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f2e$pnpm$2f$next$40$16$2e$0$2e$3_react$2d$dom$40$19$2e$2$2e$0_react$40$19$2e$2$2e$0_$5f$react$40$19$2e$2$2e$0$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("h1", {
                                             className: "text-xl font-bold text-foreground",
-                                            children: "Insure Bot Admin"
+                                            children: "SSO Chatbot ผู้ดูแล"
                                         }, void 0, false, {
                                             fileName: "[project]/components/admin-panel.tsx",
                                             lineNumber: 58,
@@ -295,7 +295,7 @@ function AdminPanel({ onLogout }) {
                                         }, this),
                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f2e$pnpm$2f$next$40$16$2e$0$2e$3_react$2d$dom$40$19$2e$2$2e$0_react$40$19$2e$2$2e$0_$5f$react$40$19$2e$2$2e$0$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
                                             className: "text-xs text-muted-foreground",
-                                            children: "Configuration Panel"
+                                            children: "แผงการตั้งค่า"
                                         }, void 0, false, {
                                             fileName: "[project]/components/admin-panel.tsx",
                                             lineNumber: 59,
@@ -319,7 +319,7 @@ function AdminPanel({ onLogout }) {
                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f2e$pnpm$2f$next$40$16$2e$0$2e$3_react$2d$dom$40$19$2e$2$2e$0_react$40$19$2e$2$2e$0_$5f$react$40$19$2e$2$2e$0$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f2e$pnpm$2f$next$40$16$2e$0$2e$3_react$2d$dom$40$19$2e$2$2e$0_react$40$19$2e$2$2e$0_$5f$react$40$19$2e$2$2e$0$2f$node_modules$2f$next$2f$dist$2f$client$2f$app$2d$dir$2f$link$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["default"], {
                                     href: "/",
                                     className: "px-4 py-2 rounded-lg border border-border text-foreground hover:bg-muted transition-colors",
-                                    children: "Back to Chat"
+                                    children: "กลับไปแชท"
                                 }, void 0, false, {
                                     fileName: "[project]/components/admin-panel.tsx",
                                     lineNumber: 63,
@@ -336,7 +336,7 @@ function AdminPanel({ onLogout }) {
                                             lineNumber: 73,
                                             columnNumber: 15
                                         }, this),
-                                        "Logout"
+                                        "ออกจากระบบ"
                                     ]
                                 }, void 0, true, {
                                     fileName: "[project]/components/admin-panel.tsx",
@@ -381,7 +381,7 @@ function AdminPanel({ onLogout }) {
                                         }, this),
                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f2e$pnpm$2f$next$40$16$2e$0$2e$3_react$2d$dom$40$19$2e$2$2e$0_react$40$19$2e$2$2e$0_$5f$react$40$19$2e$2$2e$0$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("h2", {
                                             className: "text-lg font-semibold text-foreground",
-                                            children: "Webhook Configuration"
+                                            children: "การตั้งค่า Webhook"
                                         }, void 0, false, {
                                             fileName: "[project]/components/admin-panel.tsx",
                                             lineNumber: 87,
@@ -397,7 +397,7 @@ function AdminPanel({ onLogout }) {
                                     children: [
                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f2e$pnpm$2f$next$40$16$2e$0$2e$3_react$2d$dom$40$19$2e$2$2e$0_react$40$19$2e$2$2e$0_$5f$react$40$19$2e$2$2e$0$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("label", {
                                             className: "block text-sm font-medium text-foreground mb-2",
-                                            children: "n8n Webhook URL"
+                                            children: "URL Webhook n8n"
                                         }, void 0, false, {
                                             fileName: "[project]/components/admin-panel.tsx",
                                             lineNumber: 90,
@@ -416,7 +416,7 @@ function AdminPanel({ onLogout }) {
                                         }, this),
                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f2e$pnpm$2f$next$40$16$2e$0$2e$3_react$2d$dom$40$19$2e$2$2e$0_react$40$19$2e$2$2e$0_$5f$react$40$19$2e$2$2e$0$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
                                             className: "text-xs text-muted-foreground mt-2",
-                                            children: "This URL will receive POST requests with chat messages and audio from users."
+                                            children: "URL นี้จะได้รับคำขอ POST พร้อมข้อความแชทและเสียงจากผู้ใช้"
                                         }, void 0, false, {
                                             fileName: "[project]/components/admin-panel.tsx",
                                             lineNumber: 100,
@@ -439,7 +439,7 @@ function AdminPanel({ onLogout }) {
                             children: [
                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f2e$pnpm$2f$next$40$16$2e$0$2e$3_react$2d$dom$40$19$2e$2$2e$0_react$40$19$2e$2$2e$0_$5f$react$40$19$2e$2$2e$0$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("h2", {
                                     className: "text-lg font-semibold text-foreground mb-4",
-                                    children: "Change Admin Credentials"
+                                    children: "เปลี่ยนข้อมูลเข้าสู่ระบบผู้ดูแล"
                                 }, void 0, false, {
                                     fileName: "[project]/components/admin-panel.tsx",
                                     lineNumber: 108,
@@ -452,7 +452,7 @@ function AdminPanel({ onLogout }) {
                                             children: [
                                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f2e$pnpm$2f$next$40$16$2e$0$2e$3_react$2d$dom$40$19$2e$2$2e$0_react$40$19$2e$2$2e$0_$5f$react$40$19$2e$2$2e$0$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("label", {
                                                     className: "block text-sm font-medium text-foreground mb-2",
-                                                    children: "Current Username"
+                                                    children: "ชื่อผู้ใช้ปัจจุบัน"
                                                 }, void 0, false, {
                                                     fileName: "[project]/components/admin-panel.tsx",
                                                     lineNumber: 111,
@@ -478,7 +478,7 @@ function AdminPanel({ onLogout }) {
                                             children: [
                                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f2e$pnpm$2f$next$40$16$2e$0$2e$3_react$2d$dom$40$19$2e$2$2e$0_react$40$19$2e$2$2e$0_$5f$react$40$19$2e$2$2e$0$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("label", {
                                                     className: "block text-sm font-medium text-foreground mb-2",
-                                                    children: "New Username"
+                                                    children: "ชื่อผู้ใช้ใหม่"
                                                 }, void 0, false, {
                                                     fileName: "[project]/components/admin-panel.tsx",
                                                     lineNumber: 123,
@@ -488,7 +488,7 @@ function AdminPanel({ onLogout }) {
                                                     type: "text",
                                                     value: newUsername,
                                                     onChange: (e)=>setNewUsername(e.target.value),
-                                                    placeholder: "Leave empty to keep current",
+                                                    placeholder: "เว้นว่างไว้เพื่อใช้ชื่อเดิม",
                                                     className: "w-full px-4 py-2 bg-input border border-input rounded-lg text-foreground placeholder-muted-foreground focus:outline-none focus:ring-2 focus:ring-primary"
                                                 }, void 0, false, {
                                                     fileName: "[project]/components/admin-panel.tsx",
@@ -505,7 +505,7 @@ function AdminPanel({ onLogout }) {
                                             children: [
                                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f2e$pnpm$2f$next$40$16$2e$0$2e$3_react$2d$dom$40$19$2e$2$2e$0_react$40$19$2e$2$2e$0_$5f$react$40$19$2e$2$2e$0$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("label", {
                                                     className: "block text-sm font-medium text-foreground mb-2",
-                                                    children: "New Password"
+                                                    children: "รหัสผ่านใหม่"
                                                 }, void 0, false, {
                                                     fileName: "[project]/components/admin-panel.tsx",
                                                     lineNumber: 136,
@@ -518,7 +518,7 @@ function AdminPanel({ onLogout }) {
                                                             type: showPassword ? 'text' : 'password',
                                                             value: newPassword,
                                                             onChange: (e)=>setNewPassword(e.target.value),
-                                                            placeholder: "Leave empty to keep current",
+                                                            placeholder: "เว้นว่างไว้เพื่อใช้รหัสเดิม",
                                                             className: "w-full px-4 py-2 bg-input border border-input rounded-lg text-foreground placeholder-muted-foreground focus:outline-none focus:ring-2 focus:ring-primary"
                                                         }, void 0, false, {
                                                             fileName: "[project]/components/admin-panel.tsx",
@@ -574,7 +574,7 @@ function AdminPanel({ onLogout }) {
                             className: "p-4 bg-green-50 dark:bg-green-950 border border-green-200 dark:border-green-800 rounded-lg",
                             children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f2e$pnpm$2f$next$40$16$2e$0$2e$3_react$2d$dom$40$19$2e$2$2e$0_react$40$19$2e$2$2e$0_$5f$react$40$19$2e$2$2e$0$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
                                 className: "text-sm text-green-800 dark:text-green-200",
-                                children: "Configuration saved successfully!"
+                                children: "บันทึกการตั้งค่าสำเร็จแล้ว!"
                             }, void 0, false, {
                                 fileName: "[project]/components/admin-panel.tsx",
                                 lineNumber: 161,
@@ -597,7 +597,7 @@ function AdminPanel({ onLogout }) {
                                     lineNumber: 172,
                                     columnNumber: 13
                                 }, this),
-                                isSaving ? 'Saving...' : 'Save Configuration'
+                                isSaving ? 'กำลังบันทึก...' : 'บันทึกการตั้งค่า'
                             ]
                         }, void 0, true, {
                             fileName: "[project]/components/admin-panel.tsx",

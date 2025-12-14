@@ -9,19 +9,31 @@ export default function Home() {
   const [chats, setChats] = useState<Array<{ id: string; title: string; timestamp: string; messages: ChatMessage[] }>>([])
   const [currentChatId, setCurrentChatId] = useState<string | null>(null)
   const [volume, setVolume] = useState(50)
+  const [leftPanelOpen, setLeftPanelOpen] = useState(true)
+
+  // Safe logging utility
+  const safeLogError = (message: string, ...args: any[]) => {
+    if (typeof console !== 'undefined' && console.warn) {
+      (console as any).warn(message, ...args)
+    }
+  }
 
   // Load data from localStorage on mount
   useEffect(() => {
     try {
       const savedChats = localStorage.getItem('insure-bot-chats')
       const savedVolume = localStorage.getItem('insure-bot-volume')
+      const savedCurrentChatId = localStorage.getItem('insure-bot-current-chat-id')
       if (savedChats) setChats(JSON.parse(savedChats))
       if (savedVolume) setVolume(parseInt(savedVolume))
+      if (savedCurrentChatId) setCurrentChatId(savedCurrentChatId)
     } catch (err) {
-      console.error('Failed to load saved data from localStorage:', err)
+      safeLogError('Failed to load saved data from localStorage:', err)
       // If parsing or access fails, clear potentially corrupted keys
       try { localStorage.removeItem('insure-bot-chats') } catch {}
       try { localStorage.removeItem('insure-bot-volume') } catch {}
+      try { localStorage.removeItem('insure-bot-current-chat-id') } catch {}
+      try { localStorage.removeItem('insure-bot-current-chat-id') } catch {}
     }
   }, [])
 
@@ -40,7 +52,7 @@ export default function Home() {
     try {
       localStorage.setItem('insure-bot-chats', JSON.stringify(chats))
     } catch (err: any) {
-      console.error('Failed to save chats to localStorage:', err)
+      safeLogError('Failed to save chats to localStorage:', err)
       if (isQuotaExceeded(err)) {
         // Try to shrink the payload and retry: keep most recent chats, and trim messages per chat
         try {
@@ -53,7 +65,7 @@ export default function Home() {
           // update in-memory to the trimmed version so UI matches stored data
           setChats(trimmed)
         } catch (err2) {
-          console.error('Failed to save trimmed chats to localStorage:', err2)
+          safeLogError('Failed to save trimmed chats to localStorage:', err2)
           try { localStorage.removeItem('insure-bot-chats') } catch {}
           setChats([])
         }
@@ -65,6 +77,11 @@ export default function Home() {
   useEffect(() => {
     localStorage.setItem('insure-bot-volume', volume.toString())
   }, [volume])
+
+  // Save currentChatId to localStorage whenever it changes
+  useEffect(() => {
+    localStorage.setItem('insure-bot-current-chat-id', currentChatId || '')
+  }, [currentChatId])
 
   const createNewChat = () => {
     const newChatId = Date.now().toString()
@@ -146,23 +163,26 @@ export default function Home() {
         onDeleteChat={deleteChat}
         volume={volume}
         onVolumeChange={setVolume}
+        isOpen={leftPanelOpen}
+        onClose={() => setLeftPanelOpen(false)}
       />
       {currentChatId ? (
         <ChatInterface
           chatMessages={currentChat?.messages || []}
           onMessagesUpdate={updateChatMessages}
           volume={volume}
+          onToggleLeftPanel={() => setLeftPanelOpen(!leftPanelOpen)}
         />
       ) : (
-        <div className="flex-1 flex items-center justify-center text-muted-foreground">
-          <div className="text-center">
-            <h1 className="text-3xl font-bold mb-2 text-foreground">Welcome to Insure Bot</h1>
-            <p className="mb-6">Start a new chat to begin your insurance consultation</p>
+        <div className="flex-1 flex items-center justify-center text-muted-foreground px-4">
+          <div className="text-center max-w-md">
+            <h1 className="text-xl sm:text-4xl font-bold mb-2 text-foreground">ยินดีต้อนรับสู่ SSO Chatbot</h1>
+            <p className="mb-6 text-base sm:text-xl">เริ่มแชทใหม่เพื่อเริ่มการปรึกษาด้านประกัน</p>
             <button
               onClick={createNewChat}
-              className="px-6 py-2 bg-primary text-primary-foreground rounded-lg hover:opacity-90 transition-opacity"
+              className="px-4 sm:px-8 py-2 sm:py-3 bg-primary text-primary-foreground rounded-lg hover:opacity-90 transition-opacity text-sm sm:text-lg font-medium"
             >
-              Start New Chat
+              เริ่มแชทใหม่
             </button>
           </div>
         </div>

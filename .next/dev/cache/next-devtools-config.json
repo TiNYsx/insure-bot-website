@@ -1,8 +1,8 @@
 {
   "devToolsPanelPosition": {
-    "__nextjs-dev-tools-panel-position_segment-explorer": "top-left",
-    "__nextjs-dev-tools-shared-panel-location": "top-left"
+    "__nextjs-dev-tools-panel-position_segment-explorer": "top-right",
+    "__nextjs-dev-tools-shared-panel-location": "top-right"
   },
   "theme": "dark",
-  "devToolsPosition": "top-left"
+  "devToolsPosition": "top-right"
 }
